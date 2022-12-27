@@ -75,7 +75,7 @@ def vote(request,poll_id):
             poll.option_three_count+=1
         
         poll.save()
-        return redirect("/")
+        return redirect("/result/poll_id")
 
 
     template = loader.get_template('vote.html')
@@ -95,7 +95,7 @@ def result(request,poll_id):
 
     else:
         option_one_percent=poll.option_one_count/total_poll_count*100
-        option_two_percent=poll.option_two_count/total_poll_count*10
+        option_two_percent=poll.option_two_count/total_poll_count*100
         option_three_percent=poll.option_three_count/total_poll_count*100
 
     template = loader.get_template('result.html')

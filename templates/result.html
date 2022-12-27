@@ -2,9 +2,9 @@
 
 {% block body %}
 
-<div class="container d-flex align-items-center justify-content-center" style="height:91vh;background-color:#ede6e4;max-width:100%;">
+<div class="container d-flex align-items-center justify-content-center" style="height:91vh;background-color:#ede6e4;">
     
-    <div class="border rounded shadow-lg" style="width:60%;background-color:white" >
+    <div class=" border rounded shadow-lg" style="width:90%;background-color:white" >
         <p class="my-4 mx-3 fs-3 fw-bold">{{poll.question}}?</p>
 
         <div class="d-flex align-items-center justify-content-center flex-column ">
@@ -13,7 +13,7 @@
                 <span style="width:10%;text-align: center;" class="fw-bold fs-5 me-3">{{option_one_percent|floatformat:2}}%</span>
 
                 <div class="d-flex align-items-center justify-content-center flex-column" style="width:80%">
-                    <p class="text-start fw-semibold fs-5" style="width:100%;margin-bottom: 2px;">{{poll.option_one}}</p>
+                    <p class="text-end fw-semibold fs-5" style="width:100%;margin-bottom: 2px;">{{poll.option_one}}</p>
 
                     <div class="progress" style="width:100%">
                         <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Default striped example" style="width: {{option_one_percent}}%" aria-valuenow="{{option_one_percent}}" aria-valuemin="0" aria-valuemax="100"></div>
@@ -25,7 +25,7 @@
                 <span style="width:10%;text-align: center;" class="fw-bold fs-5 me-3">{{option_two_percent|floatformat:2}}%</span>
 
                 <div class="d-flex align-items-center justify-content-center flex-column" style="width:80%">
-                    <p class="text-start fw-semibold fs-5" style="width:100%;margin-bottom: 2px;">{{poll.option_two}}</p>
+                    <p class="text-end fw-semibold fs-5" style="width:100%;margin-bottom: 2px;">{{poll.option_two}}</p>
 
                     <div class="progress" style="width:100%">
                         <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Default striped example" style="width: {{option_two_percent}}%" aria-valuenow="{{option_two_percent}}" aria-valuemin="0" aria-valuemax="100"></div>
@@ -38,7 +38,7 @@
                 <span style="width:10%;text-align: center;" class="fw-bold fs-5 me-3">{{option_three_percent|floatformat:2}}%</span>
 
                 <div class="d-flex align-items-center justify-content-center flex-column" style="width:80%">
-                    <p class="text-start fw-semibold fs-5" style="width:100%;margin-bottom: 2px;">{{poll.option_three}}</p>
+                    <p class="text-end fw-semibold fs-5" style="width:100%;margin-bottom: 2px;">{{poll.option_three}}</p>
 
                     <div class="progress" style="width:100%">
                         <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Default striped example" style="width: {{option_three_percent}}%" aria-valuenow="{{option_three_percent}}" aria-valuemin="0" aria-valuemax="100"></div>
