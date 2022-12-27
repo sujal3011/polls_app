@@ -8,18 +8,18 @@
 
 {% block body %}
 
-<div class="container overflow-hidden" style="max-width:80%">
+<div class="container" style="max-width:80%">
 
-    <div class="d-flex flex-column justify-content-center align-items-center flex-column my-5">
-        <h1>Public Polls</h1>
-        <span class="text-secondary">Below are the currently available public polls</span>
+    <div class="d-flex justify-content-center align-items-center flex-column my-5">
+        <h1>Your Polls</h1>
+        <span class="text-secondary">Below are the public polls created by you</span>
     </div>
 
     <div class="d-flex justify-content-center align-items-center flex-wrap my-5">
 
         {% for poll in polls %}
 
-        <div class=" relative card shadow d-flex justify-content-center align-items-center mx-5 my-3" style="width: 80%">
+        <div class=" relative card shadow d-flex justify-content-center align-items-center mx-5 my-3" style="width: 40%">
 
             
 
@@ -29,8 +29,7 @@
             </div>
 
             <div class="d-flex justify-content-end align-items-center p-4"  style="width: 100%" >
-                <span class="text-secondary mx-2">Created by {{poll.created_by}}</span>
-                <a href="vote/{{poll.id}}"><button type="button" class="btn btn-outline-success mx-1">Vote</button></a>
+                <a href="delete/{{poll.id}}"><button type="button" class="btn btn-outline-success mx-1">Delete Poll</button></a>
                 <a href="result/{{poll.id}}"><button type="button" class="btn btn-outline-success mx-1">View results</button></a>
             </div>
 

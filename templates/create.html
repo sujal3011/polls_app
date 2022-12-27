@@ -13,18 +13,25 @@
             <div class="mb-3" style="width:80%">
                 <label for="question" class="form-label">Question</label>
                 <input type="text" name="question" class="form-control" id="question" placeholder="Question for the poll">
-              </div>
+            </div>
 
-              <div class="mb-3" style="width:80%">
+            <div class="mb-3" style="width:80%">
                 <label for="answers" class="form-label">Answers</label>
                 <div>
-                    <input type="text" name="option_one" class="form-control mb-3" id="answer1" placeholder="Answer 1">
-                    <input type="text" name="option_two" class="form-control my-3" id="answer2" placeholder="Answer 2">
-                    <input type="text" name="option_three" class="form-control my-3" id="answer3" placeholder="Answer 3">
+                    <input type="text" name="option_one" class="form-control mb-3" id="answer1" placeholder="Option 1">
+                    <input type="text" name="option_two" class="form-control my-3" id="answer2" placeholder="Option 2">
+                    <input type="text" name="option_three" class="form-control my-3" id="answer3" placeholder="Option 3">
                 </div>
-              </div>
+            </div>
 
-        <div class="d-flex align-items-center justify-content-center">
+            <div class="d-flex align-items-center justify-content-between" style="width:80%">
+                <label for="deadline" class="form-label"  style="width:25%">Voting deadline</label>
+                <input type="date" name="deadline" id="deadline" class="form-control my-3">
+            </div>
+
+
+
+        <div class="d-flex align-items-center justify-content-center" >
             <button type="button" class="btn btn-outline-success mx-4 my-3">Back to Home</button>
             <button type="submit" class="btn  btn-success mx-4 my-3">Create</button>
         </div>
