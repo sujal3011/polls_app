@@ -8,7 +8,7 @@
 
 {% block body %}
 
-<div class="container">
+<div class="container overflow-hidden" style="background-color:#ede6e4">
 
     <div class="d-flex justify-content-center align-items-center flex-column my-5">
         <h1>Your Polls</h1>
@@ -21,28 +21,41 @@
 
         <div class=" relative card shadow d-flex justify-content-center align-items-center my-3" style="width: 80%">
 
-            
-
             <div class="card-body" style="width: 100%">
+
               <p class="card-text fw-bolder fs-4 " style:"font-family: 'Poppins', sans-serif">{{poll.question}}</p>
-              
+
+              <div class="d-flex justify-content-end align-items-center">
+
+                <a href="delete/{{poll.id}}"><button type="button" class="btn btn-outline-success mx-1">Delete Poll</button></a>
+
+                <a href="result/{{poll.id}}"><button type="button" class="btn btn-outline-success mx-1">View results</button></a>
+
+              </div>
+
             </div>
 
-            <div class="d-flex justify-content-end align-items-center p-4"  style="width: 100%" >
-                <a href="delete/{{poll.id}}"><button type="button" class="btn btn-outline-success mx-1">Delete Poll</button></a>
-                <a href="result/{{poll.id}}"><button type="button" class="btn btn-outline-success mx-1">View results</button></a>
-                <button type="button" class="btn btn-outline-success mx-1">Share</button>
+            <h4 class+"font-weight-bold">Share the Link</h4>
+
+            <div class="d-flex justify-content-center align-items-center p-4"  style="width: 100%;border-top: 1px solid gray;" >
+                
+              
+
+                <input type="text" class="form-control mx-2" id={{poll.id}} value="http://127.0.0.1:8000/vote/{{poll.id}}" style="width: 70%">
+
+                <button type="button" class="btn btn-success mx-1" onclick="myFunction({{poll.id}})">
+                    Click to copy
+                </button>
+                  
             </div>
 
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning p-2">{{poll.option_one_count|add:poll.option_two_count|add:poll.option_three_count}} votes</span>
 
+
         </div>
 
 
-
-        {% endfor %}
-
-        
+        {% endfor %}   
 
     </div>
 </div>

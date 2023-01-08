@@ -13,6 +13,7 @@ def index(request):
     if  request.user.is_anonymous:
         return redirect("/login")
     else:
+        
         polls=Poll.objects.all().exclude(created_by=request.user) #filtering polls not created by logged in user
         template = loader.get_template('index.html')
         context={
@@ -75,7 +76,7 @@ def vote(request,poll_id):
             poll.option_three_count+=1
         
         poll.save()
-        return redirect("/result/poll_id")
+        return redirect("/result/"+poll_id)
 
 
     template = loader.get_template('vote.html')

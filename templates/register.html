@@ -41,35 +41,57 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+@media screen and (max-width:900px) {
+  
+  .signform{
+      max-width: 80%;
+  }
+  
+}
+
+@media screen and (min-width:920px) {
+  
+  .signform{
+      max-width: 40%;
+  }
+  
+}
+
+
+
       </style>
 
 
   </head>
   <body>
 
-    <main class="form-signup w-100 m-auto">
+    <main class="signform form-signin w-100 m-auto shadow" style="border-radius: 10px;background-color: white;padding:15px">
         <form method="post" action="/signup">
             {% csrf_token %}
           
-          <h1 class="h3 mb-3 fw-normal"> sign up</h1>
+          <h1 class="h3 mb-3 fw-normal text-center"> Sign Up</h1>
       
-          <div class="form-floating">
+          <div class="form-floating my-3">
             <input type="text" name="username" class="form-control" id="username" placeholder="Username">
             <label for="floatingInput">Username</label>
           </div>
 
-          <div class="form-floating">
+          <div class="form-floating my-3">
             <input type="text" name="email" class="form-control" id="email" placeholder="Email">
             <label for="floatingInput">Email</label>
           </div>
 
-          <div class="form-floating">
+          <div class="form-floating my-3">
             <input type="password" name="password" class="form-control" id="password" placeholder="Password">
             <label for="floatingPassword">Password</label>
           </div>
       
           
           <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+          <a href="/login"><p style="
+            margin-top: 5px;
+            text-align: center;">Already have an account! Sign in here</p></a>
           
         </form>
       </main>

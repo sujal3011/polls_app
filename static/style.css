@@ -1,9 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@700&display=swap');
+
+body{
+    /* overflow-y: hidden; */
+    background-color: #ede6e4;
+}
+
+h1 ,h4{
+    font-family: 'Rubik', sans-serif;
+}
+
 @media screen and (max-width:900px) {
     .container{
         max-width: 100%;
+        
     }
     form{
         width: 90%;
+    }
+    .signform{
+        max-width: 80%;
     }
     
 }
@@ -15,6 +31,9 @@
     }
     form{
         width: 60%;
+    }
+    .signform{
+        max-width: 40%;
     }
     
 }

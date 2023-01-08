@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<div class="container d-flex align-items-center justify-content-center" style="height:91vh;background-color:#ede6e4;max-width:100%;">
+<div class="container d-flex align-items-center justify-content-center" style="height:91vh;max-width:100%;">
     
     <form method="post" action="/create" class="border rounded shadow-lg" style="background-color:white" >
         {% csrf_token %}
@@ -32,7 +32,7 @@
 
 
         <div class="d-flex align-items-center justify-content-center" >
-            <button type="button" class="btn btn-outline-success mx-4 my-3">Back to Home</button>
+            <a href="/"><button type="button" class="btn btn-outline-success mx-4 my-3">Back to Home</button></a>
             <button type="submit" class="btn  btn-success mx-4 my-3">Create</button>
         </div>
     </form>
